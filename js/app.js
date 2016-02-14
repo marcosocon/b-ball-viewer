@@ -7,15 +7,43 @@
 
 var balls =
 [
-  { name: 'Azurite',
-    price: 110.50
+  { name: 'Spalding',
+    price: 50.50
   },
   {
-  name: 'Bloodstone',
-  price: 22.90
+  name: 'Molten',
+  price: 40.90
   },
-  { name: 'Zircon',
-  price: 1100
+  { name: 'Spalding',
+    price: 50.50
+  },
+  {
+  name: 'Molten',
+  price: 40.90
+  },
+  { name: 'Spalding',
+    price: 50.50
+  },
+  {
+  name: 'Molten',
+  price: 40.90
+  },
+  { name: 'Spalding',
+    price: 50.50
+  },
+  {
+  name: 'Molten',
+  price: 40.90
+  },
+  { name: 'Spalding',
+    price: 50.50
+  },
+  {
+  name: 'Molten',
+  price: 40.90
+  },
+  { name: 'Nassau',
+  price: 34.33
   },
 ];
 
