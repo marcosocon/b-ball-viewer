@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="bball">
+<head>
+  <meta charset="UTF-8">
+  <title>B-ball Viewer</title>
+</head>
+<body>
+<h1>Angular JS B-ball Viewer</h1>
+<h3>Available Basquetballs</h3>
+<div ng-show="balls.length > 0" ng-controller="StoreController as store">
+  <div ng-repeat="ball in store.balls">
+    <h3>{{element.name}}</h3>
+    <h3>{{element.description}}</h3>
+    <h3>{{element.price}}</h3>
+
+  </div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
