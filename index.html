@@ -4,16 +4,12 @@
   <meta charset="UTF-8">
   <title>B-ball Viewer</title>
 </head>
-<body>
+<body class="container" ng-controller="StoreController as store">
 <h1>Angular JS B-ball Viewer</h1>
 <h3>Available Basquetballs</h3>
-<div ng-show="balls.length > 0" ng-controller="StoreController as store">
-  <div ng-repeat="ball in store.balls">
-    <h3>{{element.name}}</h3>
-    <h3>{{element.description}}</h3>
-    <h3>{{element.price}}</h3>
-
-  </div>
+<div ng-repeat="product in store.products">
+  <h3>{{product.name}}</h3>
+  <h3>{{product.price}}</h3>
 </div>
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
