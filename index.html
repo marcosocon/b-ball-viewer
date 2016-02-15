@@ -17,7 +17,7 @@
   <h3>{{product.name}}</h3>
   <h3 class="pull-right">{{product.price | currency}}</h3>
 </div>
-<section class="col-xs-6 col-xs-offset-3 text-center" ng-controller="PanelController as panel">
+<section class="col-xs-6 col-xs-offset-3" ng-controller="PanelController as panel">
 	<ul class="nav nav-pills">
 		<li ng-class="{active:panel.isSelected(1)}">
 			<a href ng-click="panel.selectTab(1)">Description</a>
