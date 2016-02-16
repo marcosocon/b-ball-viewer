@@ -1,0 +1,9 @@
+	<div class="panel" ng-show="panel.isSelected(3)">
+		<h4>Reviews :</h4>
+		<div ng-repeat="review in product.reviews">
+			<h5>{{review.stars}}<strong> Stars</strong></h5>
+			<p>{{review.body}}</p>
+			<br>
+			<cite><strong>-{{review.author}}</strong></cite>
+		</div>
+	</div>
