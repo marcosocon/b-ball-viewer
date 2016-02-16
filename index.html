@@ -7,49 +7,47 @@
   <title>B-ball Viewer</title>
 </head>
 <body class="container" ng-controller="StoreController as store">
-<div class="row">
-  <h1 class="col-xs-12 text-center">Angular JS B-ball Viewer</h1>
-</div>
-<div class="row">
-  <h3 class="col-xs-12 text-center">Available Basquetballs</h3>
-</div>
-<div class="row" ng-repeat="product in store.products">
-<div class="col-xs-8 col-xs-offset-2 text-center">
-<product-title></product-title>
-</div>
-
-<product-panels></product-panels>
-
-	<section class="col-xs-6 col-xs-offset-3">
-		<form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewForm.$valid && reviewCtrl.addReview(product)" novalidate>
-		<!--  Live Preview -->
-		<blockquote>
-			<strong>{{reviewCtrl.review.stars}} Stars</strong>
-			<br>
-			{{reviewCtrl.review.body}}
-			<cite class="clearfix">
-			{{reviewCtrl.review.author}}
-			</cite>
-		</blockquote>
-		<!--  Review Form -->
-		<h4>Submit a Review</h4>
-		<fieldset class="form-group">
-			<select ng-model="reviewCtrl.review.stars" class="form-control" ng-options="stars for stars in [5,4,3,2,1]"  title="Stars" required>
-				<option value="">Rate the Product</option>
-			</select>
-		</fieldset>
-		<fieldset class="form-group">
-			<textarea ng-model="reviewCtrl.review.body" class="form-control" placeholder="Write a short review of the product..." title="Review" required></textarea>
-		</fieldset>
-		<fieldset class="form-group">
-			<input ng-model="reviewCtrl.review.author" type="email" class="form-control" placeholder="jimmyDean@example.org" title="Email" required/>
-		</fieldset>
-		<fieldset class="form-group">
-			<input type="submit" class="btn btn-primary pull-right" value="Submit Review" />
-		</fieldset>
-		</form>
-	</section>
-</div>
+	<div class="row">
+  	<h1 class="col-xs-12 text-center">Angular JS B-ball Viewer</h1>
+	</div>
+	<div class="row">
+  	<h3 class="col-xs-12 text-center">Available Basquetballs</h3>
+	</div>
+	<div class="row" ng-repeat="product in store.products">
+		<div class="col-xs-8 col-xs-offset-2 text-center">
+			<product-title></product-title>
+		</div>
+		<product-panels></product-panels>
+		<section class="col-xs-6 col-xs-offset-3">
+			<form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewForm.$valid && reviewCtrl.addReview(product)" novalidate>
+				<!--  Live Preview -->
+				<blockquote>
+					<strong>{{reviewCtrl.review.stars}} Stars</strong>
+					<br>
+					{{reviewCtrl.review.body}}
+					<cite class="clearfix">
+					{{reviewCtrl.review.author}}
+					</cite>
+				</blockquote>
+			<!--  Review Form -->
+			<h4>Submit a Review</h4>
+			<fieldset class="form-group">
+				<select ng-model="reviewCtrl.review.stars" class="form-control" ng-options="stars for stars in [5,4,3,2,1]"  title="Stars" required>
+					<option value="">Rate the Product</option>
+				</select>
+			</fieldset>
+			<fieldset class="form-group">
+				<textarea ng-model="reviewCtrl.review.body" class="form-control" placeholder="Write a short review of the product..." title="Review" required></textarea>
+			</fieldset>
+			<fieldset class="form-group">
+				<input ng-model="reviewCtrl.review.author" type="email" class="form-control" placeholder="jimmyDean@example.org" title="Email" required/>
+			</fieldset>
+			<fieldset class="form-group">
+				<input type="submit" class="btn btn-primary pull-right" value="Submit Review" />
+			</fieldset>
+			</form>
+		</section>
+	</div>
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/angular.min.js"></script>
